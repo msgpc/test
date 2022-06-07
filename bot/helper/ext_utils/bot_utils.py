@@ -148,7 +148,7 @@ def get_readable_message():
                            f" | <b>𝗟𝗲𝗲𝗰𝗵𝗲𝗿𝘀:</b> {download.torrent_info().num_leechs}"
                 except:
                     pass
-                msg += f'\n<b>𝗕𝘆:</b> <code>{download.message.from_user.id}</code>️(<code>{download.message.from_user.first_name}</a>(<code>{download.message.from_user.id}</code>)'
+                msg += f'\n<b>𝗕𝘆:</b> <code>{download.message.from_user.id}</code>️(<code>{download.message.from_user.first_name}</code>(<code>{download.message.from_user.id}</code>)'
                 msg += f"\n<b>𝗖𝗮𝗻𝗰𝗲𝗹 :</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>\n\n════════════════════════════════"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 msg += f"\n<b>𝗦𝗶𝘇𝗲: </b>{download.size()}"
@@ -156,7 +156,7 @@ def get_readable_message():
                 msg += f" | <b>𝗨𝗽𝗹𝗼𝗮𝗱𝗲𝗱: </b>{get_readable_file_size(download.torrent_info().uploaded)}"
                 msg += f"\n<b>𝗥𝗮𝘁𝗶𝗼: </b>{round(download.torrent_info().ratio, 3)}"
                 msg += f" | <b>𝗧𝗶𝗺𝗲: </b>{get_readable_time(download.torrent_info().seeding_time)}"
-                msg += f"\n<b>𝗦𝘁𝗼𝗽: </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                msg += f"\n<b>𝗖𝗮𝗻𝗰𝗲𝗹: </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             else:
                 msg += f"\n<b>𝗦𝗶𝘇𝗲: </b>{download.size()}"
             msg += "\n\n"
